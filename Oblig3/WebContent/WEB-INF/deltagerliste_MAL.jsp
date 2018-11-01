@@ -1,5 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
 
 <!DOCTYPE html>
 <html>
@@ -18,21 +19,14 @@
 			<th align="left">Navn</th>
 			<th align="left">Mobil</th>
 		</tr>
-		<tr bgcolor="#aaffaa">
-			<td align="center">&#9792;</td>
-			<td>Anne Annesen</td>
-			<td>445 54 455</td>
-		</tr>
-		<tr bgcolor="#ffffff">
-			<td align="center">&#9794;</td>
-			<td>Arne Arnesen</td>
-			<td>901 23 456</td>
-		</tr>
-		<tr bgcolor="#ffffff">
-			<td align="center">&#9794;</td>
-			<td>Per Viskeler</td>
-			<td>112 23 344</td>
-		</tr>
+		<c:forEach var="d" items="${deltagere}">
+			<tr bgcolor=${d.mobil == deltager.mobil ? "#AAFFAA" : "#FFFFFF"}>
+				<th>${ d.kjonn == "mann" ? "&#9794" : "&#9792" }</th>
+				<th align="left">${d.fornavn}${d.etternavn}</th>
+				<th align="left">${fn:substring(d.mobil, 0, 3)}
+					${fn:substring(d.mobil, 5, 8)}</th>
+			</tr>
+		</c:forEach>
 	</table>
 	<p>
 		<a href="loggut">Ferdig</a>
