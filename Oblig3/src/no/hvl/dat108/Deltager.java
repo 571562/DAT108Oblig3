@@ -14,6 +14,10 @@ public class Deltager {
 	private String mobilnummer;
 	private String pass;
 	
+	public Deltager() {
+		
+	}
+	
 	public Deltager(String fornavn, String etternavn, String kjonn, String mobilnummer, String pass) {
 		this.fornavn = fornavn;
 		this.etternavn = etternavn;

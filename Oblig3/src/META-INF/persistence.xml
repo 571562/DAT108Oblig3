@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+	<persistence-unit transaction-type="JTA"
+		name="deltagerPU">
+
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+		<jta-data-source>DAT108LocalDS</jta-data-source>
+
+		<class>no.hvl.dat108.Deltager</class>
+
+
+		<properties>
+
+			<property name="eclipselink.weaving" value="false" />
+
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
