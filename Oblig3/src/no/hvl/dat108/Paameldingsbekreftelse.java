@@ -1,7 +1,4 @@
 package no.hvl.dat108;
-/**
- * @author herborg&sondre
- */
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,18 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 /**
- * Servlet implementation class PaloggingServlet
+ * Servlet implementation class Paameldingsbekreftelse
  */
-@WebServlet("/PaloggingServlet")
-public class PaloggingServlet extends HttpServlet {
+@WebServlet("/Paameldingsbekreftelse")
+public class Paameldingsbekreftelse extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PaloggingServlet() {
+    public Paameldingsbekreftelse() {
         super();
         // TODO Auto-generated constructor stub
     }

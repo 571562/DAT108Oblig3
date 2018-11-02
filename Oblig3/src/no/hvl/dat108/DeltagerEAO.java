@@ -27,5 +27,6 @@ public class DeltagerEAO {
 	public boolean erMobilLedig(String mobil) {
 		return hentDeltager(mobil) == null;
 	}
+	
 
 }
